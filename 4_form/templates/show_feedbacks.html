@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>피드백 목록</h2>
+    {% for feedback in feedbacks %}
+        <div class="feedback">
+            <p><strong>{{ feedback.name }}</strong>: {{ feedback.message }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
