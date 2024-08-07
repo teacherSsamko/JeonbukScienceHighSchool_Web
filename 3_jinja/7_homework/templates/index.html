@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>블로그 포스트 바로가기</h2>
+{% for post in posts %}
+<a href="{{ url_for('post', post_id=loop.index)}}">
+    <h3>{{ post.title }} | {{ post.date }}</h3>
+</a>
+{% endfor %}
+
+{% endblock content %}

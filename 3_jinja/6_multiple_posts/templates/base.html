@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>블로그</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <h1>나의 블로그</h1>
+        </a>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>이은섭 ssamko@kakao.com</p>
+    </footer>
+</body>
+
+</html>
