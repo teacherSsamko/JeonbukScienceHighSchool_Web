@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>작업 목록</h2>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                {{ todo[1] }} - {{ '완료' if todo[2] else '미완료' }}
+                <a href="{{ url_for('update_todo', todo_id=todo[0]) }}">수정</a>
+                <a href="{{ url_for('delete_todo', todo_id=todo[0]) }}">삭제</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

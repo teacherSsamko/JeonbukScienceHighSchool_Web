@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo 리스트</title>
+</head>
+<body>
+    <header>
+        <h1>Todo 리스트</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">홈</a>
+            <a href="{{ url_for('add_todo') }}">새 작업 추가</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
